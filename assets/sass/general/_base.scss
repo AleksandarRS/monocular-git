@@ -1,0 +1,171 @@
+/*General Style*/
+body {
+  color: $primary-color;
+  font-family: $primary-font;
+  font-size: 16px;
+}
+  
+  /*--------------------------------------------------------------
+  # Elements
+  --------------------------------------------------------------*/
+  blockquote::before,
+  blockquote::after,
+  q::before,
+  q::after {
+    content: '';
+  }
+  
+  blockquote,
+  q {
+    quotes: '' '';
+  }
+  
+  hr {
+    background-color: #ccc;
+    border: 0;
+    height: 1px;
+    margin-bottom: 1em;
+  }
+  
+  img {
+    height: auto; /* Make sure images are scaled correctly. */
+    max-width: 100%; /* Adhere to container width. */
+  }
+  
+  table {
+    margin: 0 0 1em;
+    width: 100%;
+  }
+  
+  a {
+    color: $primary-color;
+    text-decoration: none;
+  }
+  
+  p {
+    font-family: $primary-font;
+    font-size: $font-size-base;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+    li {
+      position: relative;
+      padding-left: 35px;
+      padding-bottom: 8px;
+      &:before {
+        align-items: center;
+        border-radius: 2px;
+        color: $white;
+        content: "\f00c";
+        display: flex;
+        font: normal normal normal 14px/1 FontAwesome;
+        height: 20px;
+        justify-content: center;
+        left: 0;
+        position: absolute;
+        text-align: center;
+        top: 0;
+        width: 20px;
+        
+        @extend %main-gradient;
+      }
+    }
+  }
+.custom-icons {
+    li {
+        padding-bottom: 15px;
+        padding-top: 15px;
+        padding-left: 55px;
+        &:before {
+          display: none;
+          content: '';
+        } 
+    }
+    span {
+        display: inline-block;
+        vertical-align: middle;
+        &:first-of-type {
+            position: absolute;
+            left: 0;
+            top: 7px;
+            border-radius: 5px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            width: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @extend %main-gradient;
+        }
+    }
+}
+
+  /*--------------------------------------------------------------
+  # Clearfix
+  --------------------------------------------------------------*/
+  .clearfix::after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: ' ';
+    clear: both;
+    height: 0;
+  }
+  
+  .clearfix {
+    display: block;
+    height: 1%;
+  }
+  
+  /*--------------------------------------------------------------
+  # Media
+  --------------------------------------------------------------*/
+  /* Make sure embeds and iframes fit their containers. */
+  embed,
+  iframe,
+  object {
+    max-width: 100%;
+  }
+  
+  /*--------------------------------------------------------------
+  # Alignment
+  --------------------------------------------------------------*/
+  .text-center,
+  .align-center {
+    text-align: center;
+  }
+  
+  .align-left {
+    text-align: left;
+  }
+  
+  .align-right {
+    text-align: right;
+  }
+  
+  .text-uppercase {
+    text-transform: uppercase;
+  }
+  
+  .alignleft {
+    display: inline;
+    margin-right: 1em;
+  }
+  
+  .alignright {
+    display: inline;
+    margin-left: 1em;
+  }
+  
+  .aligncenter {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .alignvertical {
+    vertical-align: middle;
+  }

@@ -1,0 +1,18 @@
+.cart-form-section-inner {
+    padding-bottom: 80px;
+    padding-top: 80px;
+    .order-summary-card {
+        text-align: center;
+        img {
+            border-radius: 50%;
+        }
+    }
+}
+.cart-form-section,
+.cart-form-section-inner {
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.cart-form-section {
+    background-size: cover;
+}

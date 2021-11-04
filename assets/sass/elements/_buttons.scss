@@ -1,0 +1,99 @@
+.btn {
+    @include transition-all
+}
+.btn-close {
+    align-items: center;
+    background-color: rgba($color: $white, $alpha: 0.29);
+    border-radius: 50%;
+    border: 1px solid $white;
+    color: $white;
+    display: flex;
+    filter: brightness(0) invert(1);
+    height: 37px;
+    opacity: 1;
+    justify-content: center;
+    padding: 0;
+    width: 37px;
+    @include transition-all;
+    &:hover {
+        box-shadow: 0 0 0 0.25rem rgba($color: $white, $alpha: 0.29);
+    }
+}
+.button {
+    border: 1px solid;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: $font-size-base;
+    font-weight: $font-weight-m;
+    padding: 12px 25px;
+    transition: all .5s;
+    vertical-align: middle;
+    &.button-arrow-right {
+        i, 
+        svg {
+            display: inline-block;
+            margin-left: 5px;
+            position: relative;
+            // top: 0px;
+            vertical-align: middle;
+        }
+    }
+    &.button-white {
+        background-color: $white;
+        border-color: $white;
+        color: $primary-color;
+        span {
+            color: $primary-color;
+            transition: color .5s;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        svg {
+            path {
+                transition: all .5s;
+            }
+        }
+        &:hover {
+            background-color: $primary-color;
+            border-color: $primary-color;
+            color: $white;
+            span {
+                color: $white;
+            }
+            svg {
+                path {
+                    fill: $white;
+                }
+            }
+        }
+    }
+    &.button-primary {
+        background-color: $primary-color;
+        border: 1px solid $primary-color;
+        color: $white;
+        &:hover {
+            background-color: $white;
+            color: $primary-color;
+        }
+    }
+    &.button-secondary {
+        background-color: $secondary-color;
+        border-color: $secondary-color;
+        color: $white;
+        span {
+            color: $white;
+        }
+        &:hover {
+            background-color: $white;
+            color: $secondary-color;
+            span {
+                color: $secondary-color;
+            }
+            svg {
+                path {
+                    fill: $secondary-color;
+                }
+            }
+        }
+    }
+}

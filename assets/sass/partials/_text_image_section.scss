@@ -1,0 +1,14 @@
+.text-image-section {
+    background-color: $grey-50;
+    background-position: bottom right;
+    .text-content-element-inner {
+        padding-top: 75px;
+    }
+    .text-image-section-inner {
+        padding-top: 150px;
+    }
+}
+.text-image-section,
+.text-image-section-wrapper {
+    background-repeat: no-repeat;
+}

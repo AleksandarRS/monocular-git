@@ -1,0 +1,102 @@
+#hero-section-banner {
+    &.activate-banner {
+        .video-banner-animation-cta {
+            top: 0;
+        }
+    }
+}
+.home-hero {
+    position: relative;
+    overflow: hidden;
+    @include min-mq ($lt) {
+        height: 100vh;
+    }
+    &.heigh {
+        min-height: 640px;
+        height: 50vw;
+        max-height: 1024px;
+        @include max-mq ($ip) {
+            min-height: 510px;
+            max-height: 700px;
+        }
+    }
+    .video-banner-animation-cta {
+        bottom: 0;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 9;
+        transition: all 1.1s;
+        // top: -200%;
+    }
+    .video-banner-animation-cta-container {
+        bottom: 0;
+        height: 100%;
+        left: 0;
+        margin-left: auto;
+        margin-right: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+    }
+    .video-banner-heading-button-wrap {
+        align-items: center;
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        max-width: 50%;
+        width: 100%;
+        position: relative;
+        
+        
+    }
+    .vide-banner-heading-button-inner {
+        padding: 0 25px;
+    }
+    .home-hero-media-wrap {
+        position: absolute;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        img,
+        video,
+        iframe {
+            position: relative;
+            width: 100%;
+            min-width: 1400px;
+            min-height: 640px;
+        }
+    }
+}
+
+
+// .vimeo-iframe {
+//     transform: translateY(-14%);
+//     transform-origin: top center;
+
+//     @include min-mq(1921px) {
+//         transform: translateY(-14%) scale(1.4);
+//     }
+// }
+
+// .home-hero-content {
+//     max-width: 600px;
+//     padding-top: 10px;
+//     width: 50%;
+
+//     @include max-mq($sm) {
+//         width: 100%;
+//         max-width: 460px;
+//     }
+// }
+

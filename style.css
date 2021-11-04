@@ -1,0 +1,637 @@
+/**
+* IMPORTS
+*/
+/* 0. RESET CSS */
+/* 1. Config */
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap");
+/* 2. Partials */
+/* 3. General */
+ul li:before, .custom-icons span:first-of-type {
+  background: #209DF4;
+  background: -webkit-gradient(linear, left top, right bottom, from(#209DF4), to(#AF1CEF));
+  background: linear-gradient(to bottom right, #209DF4 0%, #AF1CEF 100%);
+}
+
+.after-gradient:after {
+  background: #209DF4;
+  background: -webkit-gradient(linear, left top, right bottom, from(#209DF4), to(#AF1CEF));
+  background: linear-gradient(to bottom right, #209DF4 0%, #AF1CEF 100%);
+  bottom: 0;
+  content: '';
+  height: 100%;
+  left: 0;
+  opacity: 0.5;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+.dark-layer:after {
+  bottom: 0;
+  content: '';
+  height: 100%;
+  left: 0;
+  opacity: 0.5;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+/*General Style*/
+body {
+  color: #28292D;
+  font-family: "Urbanist", sans-serif;
+  font-size: 16px;
+}
+
+/*--------------------------------------------------------------
+  # Elements
+  --------------------------------------------------------------*/
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: '';
+}
+
+blockquote,
+q {
+  quotes: '' '';
+}
+
+hr {
+  background-color: #ccc;
+  border: 0;
+  height: 1px;
+  margin-bottom: 1em;
+}
+
+img {
+  height: auto;
+  /* Make sure images are scaled correctly. */
+  max-width: 100%;
+  /* Adhere to container width. */
+}
+
+table {
+  margin: 0 0 1em;
+  width: 100%;
+}
+
+a {
+  color: #28292D;
+  text-decoration: none;
+}
+
+p {
+  font-family: "Urbanist", sans-serif;
+  font-size: 1em;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  position: relative;
+  padding-left: 35px;
+  padding-bottom: 8px;
+}
+
+ul li:before {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 2px;
+  color: #ffffff;
+  content: "\f00c";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font: normal normal normal 14px/1 FontAwesome;
+  height: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 20px;
+}
+
+.custom-icons li {
+  padding-bottom: 15px;
+  padding-top: 15px;
+  padding-left: 55px;
+}
+
+.custom-icons li:before {
+  display: none;
+  content: '';
+}
+
+.custom-icons span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.custom-icons span:first-of-type {
+  position: absolute;
+  left: 0;
+  top: 7px;
+  border-radius: 5px;
+  height: 40px;
+  padding: 10px;
+  text-align: center;
+  width: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/*--------------------------------------------------------------
+  # Clearfix
+  --------------------------------------------------------------*/
+.clearfix::after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: ' ';
+  clear: both;
+  height: 0;
+}
+
+.clearfix {
+  display: block;
+  height: 1%;
+}
+
+/*--------------------------------------------------------------
+  # Media
+  --------------------------------------------------------------*/
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+  max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+  # Alignment
+  --------------------------------------------------------------*/
+.text-center,
+.align-center {
+  text-align: center;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.alignleft {
+  display: inline;
+  margin-right: 1em;
+}
+
+.alignright {
+  display: inline;
+  margin-left: 1em;
+}
+
+.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.alignvertical {
+  vertical-align: middle;
+}
+
+#upsell-modal .modal-content {
+  background-color: transparent;
+  z-index: 1;
+}
+
+@media (min-width: 2590px) {
+  #upsell-modal .modal-content {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+#upsell-modal.modal.show {
+  background: #FFC3DC;
+  background: -webkit-repeating-radial-gradient(ellipse farthest-corner at bottom right, #FFC3DC 0%, #97B5FC 100%);
+  background: repeating-radial-gradient(ellipse farthest-corner at bottom right, #FFC3DC 0%, #97B5FC 100%);
+}
+
+.dark-bg {
+  background-color: #2d2e4d;
+}
+
+.dark-layer {
+  position: relative;
+}
+
+.dark-layer:after {
+  background-color: #28292D;
+  opacity: 0.8;
+}
+
+.dark-layer > div {
+  position: relative;
+  z-index: 1;
+}
+
+.white-content * {
+  color: #ffffff;
+}
+
+.after-gradient {
+  position: relative;
+}
+
+.after-gradient > div {
+  position: relative;
+  z-index: 1;
+}
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+h1 {
+  font-size: 3.125em;
+  font-family: "Urbanist", sans-serif;
+  text-transform: none;
+  line-height: 1;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2.75em;
+  font-family: "Urbanist", sans-serif;
+  text-transform: none;
+  line-height: 1;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.875em;
+  font-family: "Urbanist", sans-serif;
+  text-transform: none;
+  line-height: 1;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 1.5em;
+  font-family: "Urbanist", sans-serif;
+  text-transform: none;
+  line-height: 1;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 1.5em;
+  font-family: "Urbanist", sans-serif;
+  text-transform: none;
+  line-height: 1;
+}
+
+h6 {
+  font-size: 1.4em;
+  font-family: "Urbanist", sans-serif;
+  text-transform: none;
+  line-height: 1;
+}
+
+/* 4. Elements */
+.btn {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.btn-close {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(255, 255, 255, 0.29);
+  border-radius: 50%;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
+  height: 37px;
+  opacity: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  width: 37px;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.btn-close:hover {
+  -webkit-box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.29);
+          box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.29);
+}
+
+.button {
+  border: 1px solid;
+  border-radius: 5px;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 500;
+  padding: 12px 25px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  vertical-align: middle;
+}
+
+.button.button-arrow-right i,
+.button.button-arrow-right svg {
+  display: inline-block;
+  margin-left: 5px;
+  position: relative;
+  vertical-align: middle;
+}
+
+.button.button-white {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: #28292D;
+}
+
+.button.button-white span {
+  color: #28292D;
+  -webkit-transition: color .5s;
+  transition: color .5s;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.button.button-white svg path {
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.button.button-white:hover {
+  background-color: #28292D;
+  border-color: #28292D;
+  color: #ffffff;
+}
+
+.button.button-white:hover span {
+  color: #ffffff;
+}
+
+.button.button-white:hover svg path {
+  fill: #ffffff;
+}
+
+.button.button-primary {
+  background-color: #28292D;
+  border: 1px solid #28292D;
+  color: #ffffff;
+}
+
+.button.button-primary:hover {
+  background-color: #ffffff;
+  color: #28292D;
+}
+
+.button.button-secondary {
+  background-color: #209DF4;
+  border-color: #209DF4;
+  color: #ffffff;
+}
+
+.button.button-secondary span {
+  color: #ffffff;
+}
+
+.button.button-secondary:hover {
+  background-color: #ffffff;
+  color: #209DF4;
+}
+
+.button.button-secondary:hover span {
+  color: #209DF4;
+}
+
+.button.button-secondary:hover svg path {
+  fill: #209DF4;
+}
+
+/* 4. Partials */
+#hero-section-banner.activate-banner .video-banner-animation-cta {
+  top: 0;
+}
+
+.home-hero {
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 1366px) {
+  .home-hero {
+    height: 100vh;
+  }
+}
+
+.home-hero.heigh {
+  min-height: 640px;
+  height: 50vw;
+  max-height: 1024px;
+}
+
+@media (max-width: 420px) {
+  .home-hero.heigh {
+    min-height: 510px;
+    max-height: 700px;
+  }
+}
+
+.home-hero .video-banner-animation-cta {
+  bottom: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 9;
+  -webkit-transition: all 1.1s;
+  transition: all 1.1s;
+}
+
+.home-hero .video-banner-animation-cta-container {
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+
+.home-hero .video-banner-heading-button-wrap {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 50%;
+  width: 100%;
+  position: relative;
+}
+
+.home-hero .vide-banner-heading-button-inner {
+  padding: 0 25px;
+}
+
+.home-hero .home-hero-media-wrap {
+  position: absolute;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 100%;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.home-hero .home-hero-media-wrap img,
+.home-hero .home-hero-media-wrap video,
+.home-hero .home-hero-media-wrap iframe {
+  position: relative;
+  width: 100%;
+  min-width: 1400px;
+  min-height: 640px;
+}
+
+.image-text-section-wrapper {
+  background-position: top right;
+}
+
+.image-text-section-wrapper .image-content-element {
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+.image-text-section-wrapper .image-text-row > div {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.image-text-section-wrapper .text-content-element-inner {
+  padding: 45px 60px;
+}
+
+.image-text-section-wrapper .cta-element {
+  border-top: 1px solid #6C6D97;
+  margin-top: 25px;
+  padding-top: 25px;
+}
+
+.image-text-section-wrapper .cta-element p {
+  font-style: italic;
+}
+
+.text-image-section {
+  background-color: #F9F9F9;
+  background-position: bottom right;
+}
+
+.text-image-section .text-content-element-inner {
+  padding-top: 75px;
+}
+
+.text-image-section .text-image-section-inner {
+  padding-top: 150px;
+}
+
+.text-image-section,
+.text-image-section-wrapper {
+  background-repeat: no-repeat;
+}
+
+.list-section-wrapper {
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding-bottom: 80px;
+  padding-top: 80px;
+}
+
+.list-section-wrapper .heading-content {
+  padding-bottom: 45px;
+}
+
+.cart-form-section-inner {
+  padding-bottom: 80px;
+  padding-top: 80px;
+}
+
+.cart-form-section-inner .order-summary-card {
+  text-align: center;
+}
+
+.cart-form-section-inner .order-summary-card img {
+  border-radius: 50%;
+}
+
+.cart-form-section,
+.cart-form-section-inner {
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.cart-form-section {
+  background-size: cover;
+}
+
+/* 5. Plugins */
+/*# sourceMappingURL=style.css.map */

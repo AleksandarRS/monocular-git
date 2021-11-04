@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "ACAA,OAAO,CAAC,0FAAI",
+    "sources": [
+        "style.scss",
+        "assets/sass/config/_fonts.scss",
+        "assets/sass/config/_mixins.scss",
+        "assets/sass/config/_variables.scss"
+    ],
+    "names": [],
+    "file": "style.min.css"
+}

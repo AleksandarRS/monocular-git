@@ -1,0 +1,25 @@
+.image-text-section-wrapper {
+    background-position: top right;
+    .image-content-element {
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: cover;
+    }
+    .image-text-row {
+        > div {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+    }
+    .text-content-element-inner {
+        padding: 45px 60px;
+    }
+    .cta-element {
+        border-top: 1px solid $purple-400;
+        margin-top: 25px;
+        padding-top: 25px;
+        p {
+            font-style: italic;
+        }
+    }
+}
